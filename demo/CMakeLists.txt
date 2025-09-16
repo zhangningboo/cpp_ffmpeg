@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.16)
+project(ffmpeg_demo)
+
+# 设置 C++ 标准
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(FFMPEG_DIR /data/workspace/cpp_ffmpeg/install/FFmpeg-n4.3.9/lib/cmake)
+find_package(FFMPEG REQUIRED NO_DEFAULT_PATH)
+include_directories(${FFMPEG_INCLUDE_DIRS})
+link_directories(${FFMPEG_LIB_DIRS})
+
+# set(spdlog_DIR $ENV{spdlog_HOME}/lib/cmake/spdlog)
+# find_package(spdlog REQUIRED)
+
+# # 生成可执行文件
+set(PROJECT_EXEC_NAME ${PROJECT_NAME}_bin)
+add_executable(${PROJECT_EXEC_NAME} main.cpp)
+target_include_directories(${PROJECT_EXEC_NAME} PUBLIC include)
+target_link_directories(${PROJECT_EXEC_NAME} PUBLIC
+    ${LIBSOPHON_LIB_DIRS}
+    ${FFMPEG_LIB_DIRS}
+)
+target_link_libraries(${PROJECT_EXEC_NAME}
+    # spdlog::spdlog
+    pthread
+    stdc++
+    avcodec
+    avformat
+    avutil
+    swresample
+    swscale
+    pthread
+)
