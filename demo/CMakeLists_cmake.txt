@@ -29,4 +29,7 @@ target_link_libraries(${PROJECT_EXEC_NAME}
     pthread
 )
 
+// export LD_LIBRARY_PATH=/data/workspace/cpp_ffmpeg/install/x264-20250815/lib:$LD_LIBRARY_PATH
+// export LD_LIBRARY_PATH=/data/workspace/cpp_ffmpeg/install/x265_4.1/lib:$LD_LIBRARY_PATH
+// export LD_LIBRARY_PATH=/data/workspace/cpp_ffmpeg/install/fdk-aac/lib:$LD_LIBRARY_PATH
 // export LD_LIBRARY_PATH=/data/workspace/cpp_ffmpeg/install/FFmpeg-n4.3.9/lib:$LD_LIBRARY_PATH
