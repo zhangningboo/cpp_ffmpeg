@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/data/workspace/cpp_ffmpeg/install/fdk-aac/include/**",
+                "/data/workspace/cpp_ffmpeg/install/FFmpeg-n4.3.9/include/**",
+                "/data/workspace/cpp_ffmpeg/install/x264-20250815/include/**",
+                "/data/workspace/cpp_ffmpeg/install/x265_4.1/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-arm64"
+        }
+    ],
+    "version": 4
+}
